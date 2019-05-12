@@ -22,8 +22,8 @@ public class Inventory implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Amount of exact product")
 	private java.lang.Integer amount;
 
-	@org.kie.api.definition.type.Label("Expiration Date")
-	private BigInteger expirationDate;
+	@org.kie.api.definition.type.Label(value = "daysToExpire")
+	private java.lang.Integer daysToExpire;
 
 	public Inventory() {
 	}
@@ -52,20 +52,20 @@ public class Inventory implements java.io.Serializable {
 		this.amount = amount;
 	}
 
-	public java.math.BigInteger getExpirationDate() {
-		return this.expirationDate;
+	public java.lang.Integer getDaysToExpire() {
+		return this.daysToExpire;
 	}
 
-	public void setExpirationDate(java.math.BigInteger expirationDate) {
-		this.expirationDate = expirationDate;
+	public void setDaysToExpire(java.lang.Integer daysToExpire) {
+		this.daysToExpire = daysToExpire;
 	}
 
 	public Inventory(java.lang.Long id, java.lang.String name,
-			java.lang.Integer amount, java.math.BigInteger expirationDate) {
+			java.lang.Integer amount, java.lang.Integer daysToExpire) {
 		this.id = id;
 		this.name = name;
 		this.amount = amount;
-		this.expirationDate = expirationDate;
+		this.daysToExpire = daysToExpire;
 	}
 
 }
