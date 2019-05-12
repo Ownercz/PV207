@@ -1,0 +1,1 @@
+{"id":"50256348-462f-429c-9aef-c069544dfaaf","name":"Task-taskform.frm","model":{"taskName":"Task","processId":"BuyBread.FillInventory","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
