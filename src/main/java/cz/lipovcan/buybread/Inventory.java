@@ -7,29 +7,63 @@ package cz.lipovcan.buybread;
 @javax.persistence.Entity
 public class Inventory implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    @javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "INVENTORY_ID_GENERATOR")
-    @javax.persistence.Id
-    @javax.persistence.SequenceGenerator(sequenceName = "INVENTORY_ID_SEQ", name = "INVENTORY_ID_GENERATOR")
-    private java.lang.Long id;
+	@javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "INVENTORY_ID_GENERATOR")
+	@javax.persistence.Id
+	@javax.persistence.SequenceGenerator(sequenceName = "INVENTORY_ID_SEQ", name = "INVENTORY_ID_GENERATOR")
+	private java.lang.Long id;
 
-    public Inventory() {
-    }
-    
-    public Inventory(java.lang.Long id) {
-        this.id = id;
-    }
+	@org.kie.api.definition.type.Label(value = "Product name")
+	private java.lang.String name;
 
-    public java.lang.Long getId() {
-        return this.id;
-    }
-    
-    public void setId(java.lang.Long id) {
-        this.id = id;
-    }
+	@org.kie.api.definition.type.Label(value = "Amount of exact product")
+	private java.lang.Integer amount;
 
+	@org.kie.api.definition.type.Label(value = "Expiration Date")
+	private java.util.Date expirationDate;
 
+	public Inventory() {
+	}
 
+	public java.lang.Long getId() {
+		return this.id;
+	}
+
+	public void setId(java.lang.Long id) {
+		this.id = id;
+	}
+
+	public java.lang.String getName() {
+		return this.name;
+	}
+
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public java.lang.Integer getAmount() {
+		return this.amount;
+	}
+
+	public void setAmount(java.lang.Integer amount) {
+		this.amount = amount;
+	}
+
+	public java.util.Date getExpirationDate() {
+		return this.expirationDate;
+	}
+
+	public void setExpirationDate(java.util.Date expirationDate) {
+		this.expirationDate = expirationDate;
+	}
+
+	public Inventory(java.lang.Long id, java.lang.String name,
+			java.lang.Integer amount, java.util.Date expirationDate) {
+		this.id = id;
+		this.name = name;
+		this.amount = amount;
+		this.expirationDate = expirationDate;
+	}
 
 }
