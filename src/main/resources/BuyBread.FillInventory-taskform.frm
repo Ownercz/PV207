@@ -1,0 +1,1 @@
+{"id":"a94657e5-f60f-41b6-acb3-e2e397ddb856","name":"BuyBread.FillInventory-taskform.frm","model":{"processName":"Fill Inventory","processId":"BuyBread.FillInventory","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.process.BusinessProcessFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
