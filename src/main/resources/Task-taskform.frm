@@ -1,0 +1,1 @@
+{"id":"45be52b5-b97a-417a-aaf4-6fdb734ad579","name":"Task-taskform.frm","model":{"taskName":"Task","processId":"BuyBread.InventoryCheckup","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
