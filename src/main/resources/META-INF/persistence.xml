@@ -3,7 +3,6 @@
     <persistence-unit name="cz.lipovcan:BuyBread:1.0.0-SNAPSHOT" transaction-type="JTA">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>
-        <class>cz.lipovcan.buybread.Inventory</class>
         <class>cz.lipovcan.buybread.Order</class>
         <class>cz.lipovcan.buybread.product</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
