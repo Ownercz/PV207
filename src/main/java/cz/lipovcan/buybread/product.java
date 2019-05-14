@@ -5,7 +5,7 @@ package cz.lipovcan.buybread;
  */
 
 @javax.persistence.Entity
-public class product implements java.io.Serializable {
+public class Product implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
@@ -20,7 +20,7 @@ public class product implements java.io.Serializable {
 
 	private float price;
 
-	public product() {
+	public Product() {
 	}
 
 	public java.lang.Long getId() {
@@ -55,7 +55,7 @@ public class product implements java.io.Serializable {
 		this.price = price;
 	}
 
-	public product(java.lang.Long id, java.lang.String name, int amount,
+	public Product(java.lang.Long id, java.lang.String name, int amount,
 			float price) {
 		this.id = id;
 		this.name = name;
