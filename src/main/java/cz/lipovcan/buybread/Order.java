@@ -13,8 +13,6 @@ public class Order implements java.io.Serializable {
 	@javax.persistence.SequenceGenerator(sequenceName = "ORDER_ID_SEQ", name = "ORDER_ID_GENERATOR")
 	private java.lang.Long id;
 
-	private float price;
-
 	private java.lang.Boolean is_payed;
 
 	private java.lang.String first_name;
@@ -29,6 +27,8 @@ public class Order implements java.io.Serializable {
 
 	private java.lang.String phone_number;
 
+	private float order_price;
+
 	public Order() {
 	}
 
@@ -38,14 +38,6 @@ public class Order implements java.io.Serializable {
 
 	public void setId(java.lang.Long id) {
 		this.id = id;
-	}
-
-	public float getPrice() {
-		return this.price;
-	}
-
-	public void setPrice(float price) {
-		this.price = price;
 	}
 
 	public java.lang.Boolean getIs_payed() {
@@ -104,12 +96,20 @@ public class Order implements java.io.Serializable {
 		this.phone_number = phone_number;
 	}
 
-	public Order(java.lang.Long id, float price, java.lang.Boolean is_payed,
+	public float getOrder_price() {
+		return this.order_price;
+	}
+
+	public void setOrder_price(float order_price) {
+		this.order_price = order_price;
+	}
+
+	public Order(java.lang.Long id, java.lang.Boolean is_payed,
 			java.lang.String first_name, java.lang.String last_name,
 			cz.lipovcan.buybread.Product item, java.lang.Boolean canceled,
-			java.lang.String address, java.lang.String phone_number) {
+			java.lang.String address, java.lang.String phone_number,
+			float order_price) {
 		this.id = id;
-		this.price = price;
 		this.is_payed = is_payed;
 		this.first_name = first_name;
 		this.last_name = last_name;
@@ -117,6 +117,7 @@ public class Order implements java.io.Serializable {
 		this.canceled = canceled;
 		this.address = address;
 		this.phone_number = phone_number;
+		this.order_price = order_price;
 	}
 
 }
