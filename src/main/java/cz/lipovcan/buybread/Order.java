@@ -14,9 +14,6 @@ public class Order implements java.io.Serializable {
 	@javax.persistence.SequenceGenerator(sequenceName = "ORDER_ID_SEQ", name = "ORDER_ID_GENERATOR")
 	private java.lang.Long id;
 
-	@javax.persistence.ManyToOne(cascade = {javax.persistence.CascadeType.ALL}, fetch = javax.persistence.FetchType.EAGER)
-	private cz.lipovcan.buybread.Product product;
-
 	private int amount;
 
 	private float price;
@@ -40,14 +37,6 @@ public class Order implements java.io.Serializable {
 
 	public void setId(java.lang.Long id) {
 		this.id = id;
-	}
-
-	public cz.lipovcan.buybread.Product getProduct() {
-		return this.product;
-	}
-
-	public void setProduct(cz.lipovcan.buybread.Product product) {
-		this.product = product;
 	}
 
 	public int getAmount() {
@@ -106,12 +95,11 @@ public class Order implements java.io.Serializable {
 		this.phone_number = phone_number;
 	}
 
-	public Order(java.lang.Long id, cz.lipovcan.buybread.Product product,
-			int amount, float price, java.lang.Boolean is_payed,
-			java.lang.String first_name, java.lang.String last_name,
-			java.lang.String address, int phone_number) {
+	public Order(java.lang.Long id, int amount, float price,
+			java.lang.Boolean is_payed, java.lang.String first_name,
+			java.lang.String last_name, java.lang.String address,
+			int phone_number) {
 		this.id = id;
-		this.product = product;
 		this.amount = amount;
 		this.price = price;
 		this.is_payed = is_payed;
