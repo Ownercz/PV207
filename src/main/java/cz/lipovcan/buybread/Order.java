@@ -8,7 +8,7 @@ public class Order implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@javax.persistence.GeneratedValue(generator = "ORDER_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
+	@javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "ORDER_ID_GENERATOR")
 	@javax.persistence.Id
 	@javax.persistence.SequenceGenerator(sequenceName = "ORDER_ID_SEQ", name = "ORDER_ID_GENERATOR")
 	private java.lang.Long id;
@@ -18,6 +18,16 @@ public class Order implements java.io.Serializable {
 	private java.lang.Boolean is_payed;
 
 	private java.lang.String first_name;
+
+	private java.lang.String last_name;
+
+	private cz.lipovcan.buybread.Product item;
+
+	private java.lang.Boolean canceled;
+
+	private java.lang.String address;
+
+	private java.lang.String phone_number;
 
 	public Order() {
 	}
@@ -54,12 +64,59 @@ public class Order implements java.io.Serializable {
 		this.first_name = first_name;
 	}
 
+	public java.lang.String getLast_name() {
+		return this.last_name;
+	}
+
+	public void setLast_name(java.lang.String last_name) {
+		this.last_name = last_name;
+	}
+
+	public cz.lipovcan.buybread.Product getItem() {
+		return this.item;
+	}
+
+	public void setItem(cz.lipovcan.buybread.Product item) {
+		this.item = item;
+	}
+
+	public java.lang.Boolean getCanceled() {
+		return this.canceled;
+	}
+
+	public void setCanceled(java.lang.Boolean canceled) {
+		this.canceled = canceled;
+	}
+
+	public java.lang.String getAddress() {
+		return this.address;
+	}
+
+	public void setAddress(java.lang.String address) {
+		this.address = address;
+	}
+
+	public java.lang.String getPhone_number() {
+		return this.phone_number;
+	}
+
+	public void setPhone_number(java.lang.String phone_number) {
+		this.phone_number = phone_number;
+	}
+
 	public Order(java.lang.Long id, float price, java.lang.Boolean is_payed,
-			java.lang.String first_name) {
+			java.lang.String first_name, java.lang.String last_name,
+			cz.lipovcan.buybread.Product item, java.lang.Boolean canceled,
+			java.lang.String address, java.lang.String phone_number) {
 		this.id = id;
 		this.price = price;
 		this.is_payed = is_payed;
 		this.first_name = first_name;
+		this.last_name = last_name;
+		this.item = item;
+		this.canceled = canceled;
+		this.address = address;
+		this.phone_number = phone_number;
 	}
 
 }
