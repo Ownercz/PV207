@@ -14,19 +14,11 @@ public class Order implements java.io.Serializable {
 	@javax.persistence.SequenceGenerator(sequenceName = "ORDER_ID_SEQ", name = "ORDER_ID_GENERATOR")
 	private java.lang.Long id;
 
-	private int amount;
-
 	private float price;
 
 	private java.lang.Boolean is_payed;
 
 	private java.lang.String first_name;
-
-	private java.lang.String last_name;
-
-	private java.lang.String address;
-
-	private int phone_number;
 
 	public Order() {
 	}
@@ -37,14 +29,6 @@ public class Order implements java.io.Serializable {
 
 	public void setId(java.lang.Long id) {
 		this.id = id;
-	}
-
-	public int getAmount() {
-		return this.amount;
-	}
-
-	public void setAmount(int amount) {
-		this.amount = amount;
 	}
 
 	public float getPrice() {
@@ -71,42 +55,12 @@ public class Order implements java.io.Serializable {
 		this.first_name = first_name;
 	}
 
-	public java.lang.String getLast_name() {
-		return this.last_name;
-	}
-
-	public void setLast_name(java.lang.String last_name) {
-		this.last_name = last_name;
-	}
-
-	public java.lang.String getAddress() {
-		return this.address;
-	}
-
-	public void setAddress(java.lang.String address) {
-		this.address = address;
-	}
-
-	public int getPhone_number() {
-		return this.phone_number;
-	}
-
-	public void setPhone_number(int phone_number) {
-		this.phone_number = phone_number;
-	}
-
-	public Order(java.lang.Long id, int amount, float price,
-			java.lang.Boolean is_payed, java.lang.String first_name,
-			java.lang.String last_name, java.lang.String address,
-			int phone_number) {
+	public Order(java.lang.Long id, float price, java.lang.Boolean is_payed,
+			java.lang.String first_name) {
 		this.id = id;
-		this.amount = amount;
 		this.price = price;
 		this.is_payed = is_payed;
 		this.first_name = first_name;
-		this.last_name = last_name;
-		this.address = address;
-		this.phone_number = phone_number;
 	}
 
 }
