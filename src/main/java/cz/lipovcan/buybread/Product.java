@@ -9,7 +9,7 @@ public class Product implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@javax.persistence.GeneratedValue(generator = "PRODUCT_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
+	@javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "PRODUCT_ID_GENERATOR")
 	@javax.persistence.Id
 	@javax.persistence.SequenceGenerator(sequenceName = "PRODUCT_ID_SEQ", name = "PRODUCT_ID_GENERATOR")
 	private java.lang.Long id;
@@ -18,7 +18,7 @@ public class Product implements java.io.Serializable {
 
 	private int amount;
 
-	private float price;
+	private float product_price;
 
 	public Product() {
 	}
@@ -47,20 +47,20 @@ public class Product implements java.io.Serializable {
 		this.amount = amount;
 	}
 
-	public float getPrice() {
-		return this.price;
+	public float getProduct_price() {
+		return this.product_price;
 	}
 
-	public void setPrice(float price) {
-		this.price = price;
+	public void setProduct_price(float product_price) {
+		this.product_price = product_price;
 	}
 
 	public Product(java.lang.Long id, java.lang.String name, int amount,
-			float price) {
+			float product_price) {
 		this.id = id;
 		this.name = name;
 		this.amount = amount;
-		this.price = price;
+		this.product_price = product_price;
 	}
 
 }
