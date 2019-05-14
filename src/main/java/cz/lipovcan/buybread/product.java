@@ -7,29 +7,60 @@ package cz.lipovcan.buybread;
 @javax.persistence.Entity
 public class product implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    @javax.persistence.GeneratedValue(generator = "PRODUCT_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
-    @javax.persistence.Id
-    @javax.persistence.SequenceGenerator(sequenceName = "PRODUCT_ID_SEQ", name = "PRODUCT_ID_GENERATOR")
-    private java.lang.Long id;
+	@javax.persistence.GeneratedValue(generator = "PRODUCT_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
+	@javax.persistence.Id
+	@javax.persistence.SequenceGenerator(sequenceName = "PRODUCT_ID_SEQ", name = "PRODUCT_ID_GENERATOR")
+	private java.lang.Long id;
 
-    public product() {
-    }
-    
-    public product(java.lang.Long id) {
-        this.id = id;
-    }
+	private java.lang.String name;
 
-    public java.lang.Long getId() {
-        return this.id;
-    }
-    
-    public void setId(java.lang.Long id) {
-        this.id = id;
-    }
+	private int amount;
 
+	private float price;
 
+	public product() {
+	}
 
+	public java.lang.Long getId() {
+		return this.id;
+	}
+
+	public void setId(java.lang.Long id) {
+		this.id = id;
+	}
+
+	public java.lang.String getName() {
+		return this.name;
+	}
+
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public int getAmount() {
+		return this.amount;
+	}
+
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+
+	public float getPrice() {
+		return this.price;
+	}
+
+	public void setPrice(float price) {
+		this.price = price;
+	}
+
+	public product(java.lang.Long id, java.lang.String name, int amount,
+			float price) {
+		this.id = id;
+		this.name = name;
+		this.amount = amount;
+		this.price = price;
+	}
 
 }
