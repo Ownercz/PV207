@@ -20,6 +20,9 @@ public class Order implements java.io.Serializable {
 
 	private java.lang.String first_name;
 
+	@javax.persistence.ManyToOne(cascade = {javax.persistence.CascadeType.ALL}, fetch = javax.persistence.FetchType.EAGER)
+	private cz.lipovcan.buybread.Product product;
+
 	public Order() {
 	}
 
@@ -55,12 +58,21 @@ public class Order implements java.io.Serializable {
 		this.first_name = first_name;
 	}
 
+	public cz.lipovcan.buybread.Product getProduct() {
+		return this.product;
+	}
+
+	public void setProduct(cz.lipovcan.buybread.Product product) {
+		this.product = product;
+	}
+
 	public Order(java.lang.Long id, float price, java.lang.Boolean is_payed,
-			java.lang.String first_name) {
+			java.lang.String first_name, cz.lipovcan.buybread.Product product) {
 		this.id = id;
 		this.price = price;
 		this.is_payed = is_payed;
 		this.first_name = first_name;
+		this.product = product;
 	}
 
 }
