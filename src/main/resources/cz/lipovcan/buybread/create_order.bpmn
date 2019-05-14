@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_Gw5MAHZvEemcLYsIrKzXfg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_SZ2MIHZvEemcLYsIrKzXfg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_new_orderItem" structureRef="cz.lipovcan.buybread.Order"/>
+  <bpmn2:itemDefinition id="__AA54F776-B493-4CBB-BB59-EB463EF6C9C2_new_order_receivedOutputXItem" structureRef="cz.lipovcan.buybread.Order"/>
   <bpmn2:process id="BuyBread.create_order" drools:packageName="cz.lipovcan.buybread" drools:version="1.0" drools:adHoc="false" name="create_order" isExecutable="true">
     <bpmn2:property id="new_order" itemSubjectRef="_new_orderItem" name="new_order"/>
     <bpmn2:sequenceFlow id="_C1C96BE2-86E4-44A4-A0E9-1AC13EB658C7" sourceRef="_AA54F776-B493-4CBB-BB59-EB463EF6C9C2" targetRef="_DA709A70-E3BF-4786-A41E-B39B936BF3A2">
@@ -18,10 +19,19 @@
     </bpmn2:endEvent>
     <bpmn2:startEvent id="_AA54F776-B493-4CBB-BB59-EB463EF6C9C2">
       <bpmn2:outgoing>_C1C96BE2-86E4-44A4-A0E9-1AC13EB658C7</bpmn2:outgoing>
+      <bpmn2:dataOutput id="_AA54F776-B493-4CBB-BB59-EB463EF6C9C2_new_order_receivedOutputX" drools:dtype="cz.lipovcan.buybread.Order" itemSubjectRef="__AA54F776-B493-4CBB-BB59-EB463EF6C9C2_new_order_receivedOutputXItem" name="new_order_received"/>
+      <bpmn2:dataOutputAssociation id="_SZ2MInZvEemcLYsIrKzXfg">
+        <bpmn2:sourceRef>_AA54F776-B493-4CBB-BB59-EB463EF6C9C2_new_order_receivedOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>new_order</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:outputSet id="_SZ2MIXZvEemcLYsIrKzXfg">
+        <bpmn2:dataOutputRefs>_AA54F776-B493-4CBB-BB59-EB463EF6C9C2_new_order_receivedOutputX</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+      <bpmn2:messageEventDefinition id="_SZ2MI3ZvEemcLYsIrKzXfg"/>
     </bpmn2:startEvent>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_Gw5MAXZvEemcLYsIrKzXfg">
-    <bpmndi:BPMNPlane id="_Gw5MAnZvEemcLYsIrKzXfg" bpmnElement="BuyBread.create_order">
+  <bpmndi:BPMNDiagram id="_SZ2MJHZvEemcLYsIrKzXfg">
+    <bpmndi:BPMNPlane id="_SZ2MJXZvEemcLYsIrKzXfg" bpmnElement="BuyBread.create_order">
       <bpmndi:BPMNShape id="shape__AA54F776-B493-4CBB-BB59-EB463EF6C9C2" bpmnElement="_AA54F776-B493-4CBB-BB59-EB463EF6C9C2">
         <dc:Bounds height="56.0" width="56.0" x="100.0" y="100.0"/>
       </bpmndi:BPMNShape>
@@ -34,22 +44,15 @@
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_Gw5MA3ZvEemcLYsIrKzXfg" type="BPSimData">
+  <bpmn2:relationship id="_SZ2MJnZvEemcLYsIrKzXfg" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_AA54F776-B493-4CBB-BB59-EB463EF6C9C2" id="_Gw5MBHZvEemcLYsIrKzXfg">
-            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
-              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
-                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
-              </bpsim:ProcessingTime>
-            </bpsim:TimeParameters>
-          </bpsim:ElementParameters>
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_Gw5MAHZvEemcLYsIrKzXfg</bpmn2:source>
-    <bpmn2:target>_Gw5MAHZvEemcLYsIrKzXfg</bpmn2:target>
+    <bpmn2:source>_SZ2MIHZvEemcLYsIrKzXfg</bpmn2:source>
+    <bpmn2:target>_SZ2MIHZvEemcLYsIrKzXfg</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
