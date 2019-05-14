@@ -7,6 +7,7 @@
         <class>cz.lipovcan.buybread.product</class>
         <class>cz.lipovcan.buybread.PromotionInventory</class>
         <class>cz.lipovcan.buybread.CV</class>
+        <class>cz.lipovcan.buybread.Warehouse_Database</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
