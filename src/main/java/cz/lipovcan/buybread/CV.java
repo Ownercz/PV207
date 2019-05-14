@@ -7,29 +7,49 @@ package cz.lipovcan.buybread;
 @javax.persistence.Entity
 public class CV implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    @javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "CV_ID_GENERATOR")
-    @javax.persistence.Id
-    @javax.persistence.SequenceGenerator(sequenceName = "CV_ID_SEQ", name = "CV_ID_GENERATOR")
-    private java.lang.Long id;
+	@javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "CV_ID_GENERATOR")
+	@javax.persistence.Id
+	@javax.persistence.SequenceGenerator(sequenceName = "CV_ID_SEQ", name = "CV_ID_GENERATOR")
+	private java.lang.Long id;
 
-    public CV() {
-    }
-    
-    public CV(java.lang.Long id) {
-        this.id = id;
-    }
+	private java.lang.String name;
 
-    public java.lang.Long getId() {
-        return this.id;
-    }
-    
-    public void setId(java.lang.Long id) {
-        this.id = id;
-    }
+	private java.lang.Boolean rejected;
 
+	public CV() {
+	}
 
+	public java.lang.Long getId() {
+		return this.id;
+	}
 
+	public void setId(java.lang.Long id) {
+		this.id = id;
+	}
+
+	public java.lang.String getName() {
+		return this.name;
+	}
+
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public java.lang.Boolean getRejected() {
+		return this.rejected;
+	}
+
+	public void setRejected(java.lang.Boolean rejected) {
+		this.rejected = rejected;
+	}
+
+	public CV(java.lang.Long id, java.lang.String name,
+			java.lang.Boolean rejected) {
+		this.id = id;
+		this.name = name;
+		this.rejected = rejected;
+	}
 
 }
