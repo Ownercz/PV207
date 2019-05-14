@@ -17,6 +17,20 @@ public class Order implements java.io.Serializable {
 	@javax.persistence.ManyToOne(cascade = {javax.persistence.CascadeType.ALL}, fetch = javax.persistence.FetchType.EAGER)
 	private cz.lipovcan.buybread.Product product;
 
+	private int amount;
+
+	private float price;
+
+	private java.lang.Boolean is_payed;
+
+	private java.lang.String first_name;
+
+	private java.lang.String last_name;
+
+	private java.lang.String address;
+
+	private int phone_number;
+
 	public Order() {
 	}
 
@@ -36,9 +50,75 @@ public class Order implements java.io.Serializable {
 		this.product = product;
 	}
 
-	public Order(java.lang.Long id, cz.lipovcan.buybread.Product product) {
+	public int getAmount() {
+		return this.amount;
+	}
+
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+
+	public float getPrice() {
+		return this.price;
+	}
+
+	public void setPrice(float price) {
+		this.price = price;
+	}
+
+	public java.lang.Boolean getIs_payed() {
+		return this.is_payed;
+	}
+
+	public void setIs_payed(java.lang.Boolean is_payed) {
+		this.is_payed = is_payed;
+	}
+
+	public java.lang.String getFirst_name() {
+		return this.first_name;
+	}
+
+	public void setFirst_name(java.lang.String first_name) {
+		this.first_name = first_name;
+	}
+
+	public java.lang.String getLast_name() {
+		return this.last_name;
+	}
+
+	public void setLast_name(java.lang.String last_name) {
+		this.last_name = last_name;
+	}
+
+	public java.lang.String getAddress() {
+		return this.address;
+	}
+
+	public void setAddress(java.lang.String address) {
+		this.address = address;
+	}
+
+	public int getPhone_number() {
+		return this.phone_number;
+	}
+
+	public void setPhone_number(int phone_number) {
+		this.phone_number = phone_number;
+	}
+
+	public Order(java.lang.Long id, cz.lipovcan.buybread.Product product,
+			int amount, float price, java.lang.Boolean is_payed,
+			java.lang.String first_name, java.lang.String last_name,
+			java.lang.String address, int phone_number) {
 		this.id = id;
 		this.product = product;
+		this.amount = amount;
+		this.price = price;
+		this.is_payed = is_payed;
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.address = address;
+		this.phone_number = phone_number;
 	}
 
 }
