@@ -1,0 +1,1 @@
+{"id":"cb5c4028-88f5-4eed-bea8-f71251831f8a","name":"Task-taskform.frm","model":{"taskName":"Task","processId":"BuyBread.create_order","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
