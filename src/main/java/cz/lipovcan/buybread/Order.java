@@ -31,7 +31,7 @@ public class Order implements java.io.Serializable {
 	@javax.persistence.OneToMany(cascade = {javax.persistence.CascadeType.ALL}, fetch = javax.persistence.FetchType.EAGER)
 	private java.util.List<cz.lipovcan.buybread.Product> item;
 
-	private java.lang.Boolean goods_avalaible;
+	private java.lang.Boolean goods_available;
 
 	public Order() {
 	}
@@ -108,12 +108,12 @@ public class Order implements java.io.Serializable {
 		this.item = item;
 	}
 
-	public java.lang.Boolean getGoods_avalaible() {
-		return this.goods_avalaible;
+	public java.lang.Boolean getGoods_available() {
+		return this.goods_available;
 	}
 
-	public void setGoods_avalaible(java.lang.Boolean goods_avalaible) {
-		this.goods_avalaible = goods_avalaible;
+	public void setGoods_available(java.lang.Boolean goods_available) {
+		this.goods_available = goods_available;
 	}
 
 	public Order(java.lang.Long id, java.lang.Boolean is_payed,
@@ -121,7 +121,7 @@ public class Order implements java.io.Serializable {
 			java.lang.Boolean canceled, java.lang.String address,
 			java.lang.String phone_number, float order_price,
 			java.util.List<cz.lipovcan.buybread.Product> item,
-			java.lang.Boolean goods_avalaible) {
+			java.lang.Boolean goods_available) {
 		this.id = id;
 		this.is_payed = is_payed;
 		this.first_name = first_name;
@@ -131,7 +131,7 @@ public class Order implements java.io.Serializable {
 		this.phone_number = phone_number;
 		this.order_price = order_price;
 		this.item = item;
-		this.goods_avalaible = goods_avalaible;
+		this.goods_available = goods_available;
 	}
 
 }
