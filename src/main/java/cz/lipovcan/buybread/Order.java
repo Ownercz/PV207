@@ -20,8 +20,6 @@ public class Order implements java.io.Serializable {
 
 	private java.lang.String last_name;
 
-	private cz.lipovcan.buybread.Product item;
-
 	private java.lang.Boolean canceled;
 
 	private java.lang.String address;
@@ -29,6 +27,9 @@ public class Order implements java.io.Serializable {
 	private java.lang.String phone_number;
 
 	private float order_price;
+
+	@javax.persistence.OneToMany(cascade = {javax.persistence.CascadeType.ALL}, fetch = javax.persistence.FetchType.EAGER)
+	private java.util.List<cz.lipovcan.buybread.Product> item;
 
 	public Order() {
 	}
@@ -65,14 +66,6 @@ public class Order implements java.io.Serializable {
 		this.last_name = last_name;
 	}
 
-	public cz.lipovcan.buybread.Product getItem() {
-		return this.item;
-	}
-
-	public void setItem(cz.lipovcan.buybread.Product item) {
-		this.item = item;
-	}
-
 	public java.lang.Boolean getCanceled() {
 		return this.canceled;
 	}
@@ -105,20 +98,28 @@ public class Order implements java.io.Serializable {
 		this.order_price = order_price;
 	}
 
+	public java.util.List<cz.lipovcan.buybread.Product> getItem() {
+		return this.item;
+	}
+
+	public void setItem(java.util.List<cz.lipovcan.buybread.Product> item) {
+		this.item = item;
+	}
+
 	public Order(java.lang.Long id, java.lang.Boolean is_payed,
 			java.lang.String first_name, java.lang.String last_name,
-			cz.lipovcan.buybread.Product item, java.lang.Boolean canceled,
-			java.lang.String address, java.lang.String phone_number,
-			float order_price) {
+			java.lang.Boolean canceled, java.lang.String address,
+			java.lang.String phone_number, float order_price,
+			java.util.List<cz.lipovcan.buybread.Product> item) {
 		this.id = id;
 		this.is_payed = is_payed;
 		this.first_name = first_name;
 		this.last_name = last_name;
-		this.item = item;
 		this.canceled = canceled;
 		this.address = address;
 		this.phone_number = phone_number;
 		this.order_price = order_price;
+		this.item = item;
 	}
 
 }
