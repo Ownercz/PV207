@@ -14,11 +14,11 @@ public class Product implements java.io.Serializable {
 	@javax.persistence.SequenceGenerator(sequenceName = "PRODUCT_ID_SEQ", name = "PRODUCT_ID_GENERATOR")
 	private java.lang.Long id;
 
-	private java.lang.String name;
-
-	private int amount;
-
 	private float product_price;
+
+	private java.lang.String product_name;
+
+	private int product_amount;
 
 	public Product() {
 	}
@@ -31,22 +31,6 @@ public class Product implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public java.lang.String getName() {
-		return this.name;
-	}
-
-	public void setName(java.lang.String name) {
-		this.name = name;
-	}
-
-	public int getAmount() {
-		return this.amount;
-	}
-
-	public void setAmount(int amount) {
-		this.amount = amount;
-	}
-
 	public float getProduct_price() {
 		return this.product_price;
 	}
@@ -55,12 +39,28 @@ public class Product implements java.io.Serializable {
 		this.product_price = product_price;
 	}
 
-	public Product(java.lang.Long id, java.lang.String name, int amount,
-			float product_price) {
+	public java.lang.String getProduct_name() {
+		return this.product_name;
+	}
+
+	public void setProduct_name(java.lang.String product_name) {
+		this.product_name = product_name;
+	}
+
+	public int getProduct_amount() {
+		return this.product_amount;
+	}
+
+	public void setProduct_amount(int product_amount) {
+		this.product_amount = product_amount;
+	}
+
+	public Product(java.lang.Long id, float product_price,
+			java.lang.String product_name, int product_amount) {
 		this.id = id;
-		this.name = name;
-		this.amount = amount;
 		this.product_price = product_price;
+		this.product_name = product_name;
+		this.product_amount = product_amount;
 	}
 
 }
