@@ -5,6 +5,7 @@ package cz.lipovcan.buybread;
  */
 
 @javax.persistence.Entity
+@javax.xml.bind.annotation.XmlRootElement
 public class Product implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
