@@ -6,12 +6,34 @@ package cz.lipovcan.buybread;
 
 public class order_for_supplier implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public order_for_supplier() {
-    }
+	private java.lang.String supplier_name;
+	private java.util.List<cz.lipovcan.buybread.Product> item;
 
+	public order_for_supplier() {
+	}
 
+	public java.lang.String getSupplier_name() {
+		return this.supplier_name;
+	}
 
+	public void setSupplier_name(java.lang.String supplier_name) {
+		this.supplier_name = supplier_name;
+	}
+
+	public java.util.List<cz.lipovcan.buybread.Product> getItem() {
+		return this.item;
+	}
+
+	public void setItem(java.util.List<cz.lipovcan.buybread.Product> item) {
+		this.item = item;
+	}
+
+	public order_for_supplier(java.lang.String supplier_name,
+			java.util.List<cz.lipovcan.buybread.Product> item) {
+		this.supplier_name = supplier_name;
+		this.item = item;
+	}
 
 }
