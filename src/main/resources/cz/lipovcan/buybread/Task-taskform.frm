@@ -1,0 +1,1 @@
+{"id":"6355cbc3-d02b-4d4a-8475-ced6da111075","name":"Task-taskform.frm","model":{"taskName":"Task","processId":"BuyBread.Optimize_supply_chain","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
