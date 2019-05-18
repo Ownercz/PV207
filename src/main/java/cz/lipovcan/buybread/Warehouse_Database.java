@@ -16,6 +16,9 @@ public class Warehouse_Database implements java.io.Serializable {
 
 	private java.lang.Integer amount;
 
+	@org.kie.api.definition.type.Description(value = "statistics about the product. Used in Optimize_supply_chain to decide whether to order less, more or the same amount of goods.")
+	private java.lang.String product_stats;
+
 	public Warehouse_Database() {
 	}
 
@@ -35,9 +38,19 @@ public class Warehouse_Database implements java.io.Serializable {
 		this.amount = amount;
 	}
 
-	public Warehouse_Database(java.lang.Long id, java.lang.Integer amount) {
+	public java.lang.String getProduct_stats() {
+		return this.product_stats;
+	}
+
+	public void setProduct_stats(java.lang.String product_stats) {
+		this.product_stats = product_stats;
+	}
+
+	public Warehouse_Database(java.lang.Long id, java.lang.Integer amount,
+			java.lang.String product_stats) {
 		this.id = id;
 		this.amount = amount;
+		this.product_stats = product_stats;
 	}
 
 }
