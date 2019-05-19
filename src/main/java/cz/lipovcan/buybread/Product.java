@@ -21,6 +21,10 @@ public class Product implements java.io.Serializable {
 
 	private int product_amount;
 
+	private java.lang.String product_stats;
+
+	private java.lang.String product_supplier;
+
 	public Product() {
 	}
 
@@ -56,12 +60,31 @@ public class Product implements java.io.Serializable {
 		this.product_amount = product_amount;
 	}
 
+	public java.lang.String getProduct_stats() {
+		return this.product_stats;
+	}
+
+	public void setProduct_stats(java.lang.String product_stats) {
+		this.product_stats = product_stats;
+	}
+
+	public java.lang.String getProduct_supplier() {
+		return this.product_supplier;
+	}
+
+	public void setProduct_supplier(java.lang.String product_supplier) {
+		this.product_supplier = product_supplier;
+	}
+
 	public Product(java.lang.Long id, float product_price,
-			java.lang.String product_name, int product_amount) {
+			java.lang.String product_name, int product_amount,
+			java.lang.String product_stats, java.lang.String product_supplier) {
 		this.id = id;
 		this.product_price = product_price;
 		this.product_name = product_name;
 		this.product_amount = product_amount;
+		this.product_stats = product_stats;
+		this.product_supplier = product_supplier;
 	}
 
 }
