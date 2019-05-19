@@ -16,6 +16,9 @@ public class Warehouse_Database implements java.io.Serializable {
 
 	private java.lang.Integer amount;
 
+	@javax.persistence.OneToMany(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
+	private java.util.List<cz.lipovcan.buybread.Product> products;
+
 	public Warehouse_Database() {
 	}
 
@@ -35,9 +38,20 @@ public class Warehouse_Database implements java.io.Serializable {
 		this.amount = amount;
 	}
 
-	public Warehouse_Database(java.lang.Long id, java.lang.Integer amount) {
+	public java.util.List<cz.lipovcan.buybread.Product> getProducts() {
+		return this.products;
+	}
+
+	public void setProducts(
+			java.util.List<cz.lipovcan.buybread.Product> products) {
+		this.products = products;
+	}
+
+	public Warehouse_Database(java.lang.Long id, java.lang.Integer amount,
+			java.util.List<cz.lipovcan.buybread.Product> products) {
 		this.id = id;
 		this.amount = amount;
+		this.products = products;
 	}
 
 }
