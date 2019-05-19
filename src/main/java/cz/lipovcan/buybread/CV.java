@@ -14,9 +14,11 @@ public class CV implements java.io.Serializable {
 	@javax.persistence.SequenceGenerator(sequenceName = "CV_ID_SEQ", name = "CV_ID_GENERATOR")
 	private java.lang.Long id;
 
-	private java.lang.String name;
-
 	private java.lang.Boolean rejected;
+
+	private java.lang.String first_name;
+
+	private java.lang.String last_name;
 
 	public CV() {
 	}
@@ -29,14 +31,6 @@ public class CV implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public java.lang.String getName() {
-		return this.name;
-	}
-
-	public void setName(java.lang.String name) {
-		this.name = name;
-	}
-
 	public java.lang.Boolean getRejected() {
 		return this.rejected;
 	}
@@ -45,11 +39,28 @@ public class CV implements java.io.Serializable {
 		this.rejected = rejected;
 	}
 
-	public CV(java.lang.Long id, java.lang.String name,
-			java.lang.Boolean rejected) {
+	public java.lang.String getFirst_name() {
+		return this.first_name;
+	}
+
+	public void setFirst_name(java.lang.String first_name) {
+		this.first_name = first_name;
+	}
+
+	public java.lang.String getLast_name() {
+		return this.last_name;
+	}
+
+	public void setLast_name(java.lang.String last_name) {
+		this.last_name = last_name;
+	}
+
+	public CV(java.lang.Long id, java.lang.Boolean rejected,
+			java.lang.String first_name, java.lang.String last_name) {
 		this.id = id;
-		this.name = name;
 		this.rejected = rejected;
+		this.first_name = first_name;
+		this.last_name = last_name;
 	}
 
 }
