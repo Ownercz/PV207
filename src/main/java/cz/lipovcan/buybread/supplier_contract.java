@@ -16,12 +16,12 @@ public class supplier_contract implements java.io.Serializable {
 
 	private java.lang.String supplier_name;
 
-	private java.lang.String supplier_stats;
-
 	private java.lang.Integer actual_contract_order;
 
 	@javax.persistence.OneToMany(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
 	private java.util.List<cz.lipovcan.buybread.Product> product;
+
+	private java.lang.String stats;
 
 	public supplier_contract() {
 	}
@@ -42,14 +42,6 @@ public class supplier_contract implements java.io.Serializable {
 		this.supplier_name = supplier_name;
 	}
 
-	public java.lang.String getSupplier_stats() {
-		return this.supplier_stats;
-	}
-
-	public void setSupplier_stats(java.lang.String supplier_stats) {
-		this.supplier_stats = supplier_stats;
-	}
-
 	public java.lang.Integer getActual_contract_order() {
 		return this.actual_contract_order;
 	}
@@ -66,15 +58,23 @@ public class supplier_contract implements java.io.Serializable {
 		this.product = product;
 	}
 
+	public java.lang.String getStats() {
+		return this.stats;
+	}
+
+	public void setStats(java.lang.String stats) {
+		this.stats = stats;
+	}
+
 	public supplier_contract(java.lang.Long id, java.lang.String supplier_name,
-			java.lang.String supplier_stats,
 			java.lang.Integer actual_contract_order,
-			java.util.List<cz.lipovcan.buybread.Product> product) {
+			java.util.List<cz.lipovcan.buybread.Product> product,
+			java.lang.String stats) {
 		this.id = id;
 		this.supplier_name = supplier_name;
-		this.supplier_stats = supplier_stats;
 		this.actual_contract_order = actual_contract_order;
 		this.product = product;
+		this.stats = stats;
 	}
 
 }
