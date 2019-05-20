@@ -21,12 +21,6 @@ public class Product implements java.io.Serializable {
 
 	private int product_amount;
 
-	private java.lang.String supplier_name;
-
-	private java.lang.String database_stats;
-
-	private java.lang.Integer actual_contract_amount;
-
 	public Product() {
 	}
 
@@ -62,42 +56,12 @@ public class Product implements java.io.Serializable {
 		this.product_amount = product_amount;
 	}
 
-	public java.lang.String getSupplier_name() {
-		return this.supplier_name;
-	}
-
-	public void setSupplier_name(java.lang.String supplier_name) {
-		this.supplier_name = supplier_name;
-	}
-
-	public java.lang.String getDatabase_stats() {
-		return this.database_stats;
-	}
-
-	public void setDatabase_stats(java.lang.String database_stats) {
-		this.database_stats = database_stats;
-	}
-
-	public java.lang.Integer getActual_contract_amount() {
-		return this.actual_contract_amount;
-	}
-
-	public void setActual_contract_amount(
-			java.lang.Integer actual_contract_amount) {
-		this.actual_contract_amount = actual_contract_amount;
-	}
-
 	public Product(java.lang.Long id, float product_price,
-			java.lang.String product_name, int product_amount,
-			java.lang.String supplier_name, java.lang.String database_stats,
-			java.lang.Integer actual_contract_amount) {
+			java.lang.String product_name, int product_amount) {
 		this.id = id;
 		this.product_price = product_price;
 		this.product_name = product_name;
 		this.product_amount = product_amount;
-		this.supplier_name = supplier_name;
-		this.database_stats = database_stats;
-		this.actual_contract_amount = actual_contract_amount;
 	}
 
 }
