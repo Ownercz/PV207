@@ -1,0 +1,1 @@
+{"id":"54ec6665-6bdf-48af-a92f-ef41c489f476","name":"contact_candidate-taskform.frm","model":{"taskName":"contact_candidate","processId":"BuyBread.driver_hiring","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
