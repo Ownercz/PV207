@@ -7,29 +7,52 @@ package cz.lipovcan.buybread;
 @javax.persistence.Entity
 public class supplier_contract implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    @javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "SUPPLIER_CONTRACT_ID_GENERATOR")
-    @javax.persistence.Id
-    @javax.persistence.SequenceGenerator(sequenceName = "SUPPLIER_CONTRACT_ID_SEQ", name = "SUPPLIER_CONTRACT_ID_GENERATOR")
-    private java.lang.Long id;
+	@javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "SUPPLIER_CONTRACT_ID_GENERATOR")
+	@javax.persistence.Id
+	@javax.persistence.SequenceGenerator(sequenceName = "SUPPLIER_CONTRACT_ID_SEQ", name = "SUPPLIER_CONTRACT_ID_GENERATOR")
+	private java.lang.Long id;
 
-    public supplier_contract() {
-    }
-    
-    public supplier_contract(java.lang.Long id) {
-        this.id = id;
-    }
+	@javax.persistence.OneToMany(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
+	private java.util.List<cz.lipovcan.buybread.Product> products;
 
-    public java.lang.Long getId() {
-        return this.id;
-    }
-    
-    public void setId(java.lang.Long id) {
-        this.id = id;
-    }
+	private java.lang.String supplier_name;
 
+	public supplier_contract() {
+	}
 
+	public java.lang.Long getId() {
+		return this.id;
+	}
 
+	public void setId(java.lang.Long id) {
+		this.id = id;
+	}
+
+	public java.util.List<cz.lipovcan.buybread.Product> getProducts() {
+		return this.products;
+	}
+
+	public void setProducts(
+			java.util.List<cz.lipovcan.buybread.Product> products) {
+		this.products = products;
+	}
+
+	public java.lang.String getSupplier_name() {
+		return this.supplier_name;
+	}
+
+	public void setSupplier_name(java.lang.String supplier_name) {
+		this.supplier_name = supplier_name;
+	}
+
+	public supplier_contract(java.lang.Long id,
+			java.util.List<cz.lipovcan.buybread.Product> products,
+			java.lang.String supplier_name) {
+		this.id = id;
+		this.products = products;
+		this.supplier_name = supplier_name;
+	}
 
 }
