@@ -14,11 +14,11 @@ public class CV implements java.io.Serializable {
 	@javax.persistence.Id
 	@javax.persistence.SequenceGenerator(sequenceName = "CV_ID_SEQ", name = "CV_ID_GENERATOR")
 	private java.lang.Long id;
-
+    
 	private java.lang.Boolean rejected;
-
+    @NotBlank
 	private java.lang.String first_name;
-
+    @NotBlank
 	private java.lang.String last_name;
 
 	public CV() {
