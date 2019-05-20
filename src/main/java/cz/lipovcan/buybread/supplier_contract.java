@@ -7,29 +7,74 @@ package cz.lipovcan.buybread;
 @javax.persistence.Entity
 public class supplier_contract implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    @javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "SUPPLIER_CONTRACT_ID_GENERATOR")
-    @javax.persistence.Id
-    @javax.persistence.SequenceGenerator(sequenceName = "SUPPLIER_CONTRACT_ID_SEQ", name = "SUPPLIER_CONTRACT_ID_GENERATOR")
-    private java.lang.Long id;
+	@javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "SUPPLIER_CONTRACT_ID_GENERATOR")
+	@javax.persistence.Id
+	@javax.persistence.SequenceGenerator(sequenceName = "SUPPLIER_CONTRACT_ID_SEQ", name = "SUPPLIER_CONTRACT_ID_GENERATOR")
+	private java.lang.Long id;
 
-    public supplier_contract() {
-    }
-    
-    public supplier_contract(java.lang.Long id) {
-        this.id = id;
-    }
+	private java.lang.String supplier_name;
 
-    public java.lang.Long getId() {
-        return this.id;
-    }
-    
-    public void setId(java.lang.Long id) {
-        this.id = id;
-    }
+	private java.lang.String supplier_stats;
 
+	private java.lang.Integer actual_contract_order;
 
+	@javax.persistence.OneToMany(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
+	private java.util.List<cz.lipovcan.buybread.Product> product;
 
+	public supplier_contract() {
+	}
+
+	public java.lang.Long getId() {
+		return this.id;
+	}
+
+	public void setId(java.lang.Long id) {
+		this.id = id;
+	}
+
+	public java.lang.String getSupplier_name() {
+		return this.supplier_name;
+	}
+
+	public void setSupplier_name(java.lang.String supplier_name) {
+		this.supplier_name = supplier_name;
+	}
+
+	public java.lang.String getSupplier_stats() {
+		return this.supplier_stats;
+	}
+
+	public void setSupplier_stats(java.lang.String supplier_stats) {
+		this.supplier_stats = supplier_stats;
+	}
+
+	public java.lang.Integer getActual_contract_order() {
+		return this.actual_contract_order;
+	}
+
+	public void setActual_contract_order(java.lang.Integer actual_contract_order) {
+		this.actual_contract_order = actual_contract_order;
+	}
+
+	public java.util.List<cz.lipovcan.buybread.Product> getProduct() {
+		return this.product;
+	}
+
+	public void setProduct(java.util.List<cz.lipovcan.buybread.Product> product) {
+		this.product = product;
+	}
+
+	public supplier_contract(java.lang.Long id, java.lang.String supplier_name,
+			java.lang.String supplier_stats,
+			java.lang.Integer actual_contract_order,
+			java.util.List<cz.lipovcan.buybread.Product> product) {
+		this.id = id;
+		this.supplier_name = supplier_name;
+		this.supplier_stats = supplier_stats;
+		this.actual_contract_order = actual_contract_order;
+		this.product = product;
+	}
 
 }
