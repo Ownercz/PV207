@@ -17,8 +17,10 @@ public class supplier_contract implements java.io.Serializable {
 	@javax.persistence.OneToMany(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
 	private java.util.List<cz.lipovcan.buybread.Product> products;
 
-	@org.kie.api.definition.type.Description(value = "foreign key to product")
+	@org.kie.api.definition.type.Description("foreign key to product")
 	private java.lang.String supplier_name;
+
+	private java.lang.Integer supplier_amount;
 
 	public supplier_contract() {
 	}
@@ -48,12 +50,21 @@ public class supplier_contract implements java.io.Serializable {
 		this.supplier_name = supplier_name;
 	}
 
+	public java.lang.Integer getSupplier_amount() {
+		return this.supplier_amount;
+	}
+
+	public void setSupplier_amount(java.lang.Integer supplier_amount) {
+		this.supplier_amount = supplier_amount;
+	}
+
 	public supplier_contract(java.lang.Long id,
 			java.util.List<cz.lipovcan.buybread.Product> products,
-			java.lang.String supplier_name) {
+			java.lang.String supplier_name, java.lang.Integer supplier_amount) {
 		this.id = id;
 		this.products = products;
 		this.supplier_name = supplier_name;
+		this.supplier_amount = supplier_amount;
 	}
 
 }
