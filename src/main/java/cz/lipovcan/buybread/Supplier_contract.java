@@ -42,6 +42,10 @@ public class Supplier_contract implements java.io.Serializable {
 	public void setSupplier(cz.lipovcan.buybread.Supplier supplier) {
 		this.supplier = supplier;
 	}
+	
+	public cz.lipovcan.buybread.Supplier getSupplier_stats() {
+		return this.supplier.supplier_stats;
+	}
 
 	public java.lang.String getStatus() {
 		return this.status;
@@ -58,6 +62,7 @@ public class Supplier_contract implements java.io.Serializable {
 	public void setProduct(java.util.List<cz.lipovcan.buybread.Product> product) {
 		this.product = product;
 	}
+	
 
 	public java.lang.Integer getNew_amount() {
 		return this.new_amount;
