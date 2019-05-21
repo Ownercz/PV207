@@ -7,6 +7,9 @@
   <dmn:inputData id="_AEA76AA2-4747-417F-8762-F6F20438193A" name="new_amount">
     <dmn:variable id="_EFF3B958-8C67-4F67-884F-CA8E15ED9D07" name="new_amount" typeRef="number"/>
   </dmn:inputData>
+  <dmn:inputData id="_E750BFE7-6CBA-440B-8D61-A21FCCB63BDA" name="supplier_actual_amount">
+    <dmn:variable id="_C3F8766F-827F-4B40-9C87-30E034CFCC09" name="supplier_actual_amount" typeRef="number"/>
+  </dmn:inputData>
   <dmn:decision id="_456B9DC3-391D-4A39-8856-1CFD394E7AF8" name="check_amount_DMN">
     <dmn:variable id="_B2473021-2913-4208-AD9F-81998DD0DE77" name="check_amount_DMN" typeRef="boolean"/>
     <dmn:informationRequirement id="_7E4C8FCD-A554-425F-B26C-B28C15204416">
@@ -44,7 +47,7 @@
           <dmn:text>&gt;new_amount</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_0523476B-0997-4A96-A701-1F8ADD8C1CBA">
-          <dmn:text>0</dmn:text>
+          <dmn:text>2</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_22596605-1726-4A4D-A621-1E8C28505F5B">
           <dmn:text>true</dmn:text>
@@ -74,7 +77,7 @@
           <dmn:text>&lt;new_amount</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_F2951BC6-9FCE-4A59-8EB5-0486CA4B20C3">
-          <dmn:text>2</dmn:text>
+          <dmn:text>0</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_EA4F55AC-E642-4CC4-B9C7-52F8B74BF7C1">
           <dmn:text>true</dmn:text>
@@ -97,9 +100,6 @@
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
-  <dmn:inputData id="_E750BFE7-6CBA-440B-8D61-A21FCCB63BDA" name="supplier_actual_amount">
-    <dmn:variable id="_C3F8766F-827F-4B40-9C87-30E034CFCC09" name="supplier_actual_amount" typeRef="number"/>
-  </dmn:inputData>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <di:extension>
@@ -132,15 +132,6 @@
         <dc:Bounds x="269.5981308411215" y="337.68421052631584" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-_456B9DC3-391D-4A39-8856-1CFD394E7AF8" dmnElementRef="_456B9DC3-391D-4A39-8856-1CFD394E7AF8" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="476" y="156" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_E750BFE7-6CBA-440B-8D61-A21FCCB63BDA" dmnElementRef="_E750BFE7-6CBA-440B-8D61-A21FCCB63BDA" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -148,6 +139,15 @@
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="446.29906542056074" y="337.3421052631579" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_456B9DC3-391D-4A39-8856-1CFD394E7AF8" dmnElementRef="_456B9DC3-391D-4A39-8856-1CFD394E7AF8" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="476" y="156" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-_7E4C8FCD-A554-425F-B26C-B28C15204416" dmnElementRef="_7E4C8FCD-A554-425F-B26C-B28C15204416">
