@@ -1,0 +1,1 @@
+{"id":"40b9a801-0d1c-4939-809b-7c5e9b89cefd","name":"notify_candidate-taskform.frm","model":{"taskName":"notify_candidate","processId":"BuyBread.driver_hiring","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
