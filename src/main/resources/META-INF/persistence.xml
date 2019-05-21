@@ -10,7 +10,6 @@
         <class>cz.lipovcan.buybread.Warehouse_Database</class>
         <class>cz.lipovcan.buybread.supplier_contract</class>
         <class>cz.lipovcan.buybread.Supplier</class>
-        <class>cz.lipovcan.buybread.SupplierLine</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
