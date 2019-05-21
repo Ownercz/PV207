@@ -41,10 +41,10 @@
       <dmn:rule id="_6D36DB17-97B6-4825-B67B-CA0448CAF719">
         <dmn:description>stats 0 means more goods to order</dmn:description>
         <dmn:inputEntry id="_84434C4F-ED36-4CE1-915D-5A2C8467A4EA">
-          <dmn:text>&gt;x</dmn:text>
+          <dmn:text>&gt;10</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_AE79629B-9F73-49D1-83F5-9E33676AD74D">
-          <dmn:text>x</dmn:text>
+          <dmn:text>10</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_E4A2BA35-7648-4593-9B4B-22E84792A73E">
           <dmn:text>0</dmn:text>
