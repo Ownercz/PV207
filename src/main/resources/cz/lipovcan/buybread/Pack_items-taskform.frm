@@ -1,0 +1,1 @@
+{"id":"57060c41-d783-4f9b-b593-9e594ea106b2","name":"Pack_items-taskform.frm","model":{"taskName":"Pack_items","processId":"BuyBread.Managewarehouse","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}

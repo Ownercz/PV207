@@ -1,0 +1,1 @@
+{"id":"cdd11fe5-ac88-4fb1-81f6-8570a7a05269","name":"Gather_items_from_inventory-taskform.frm","model":{"taskName":"Gather_items_from_inventory","processId":"BuyBread.Managewarehouse","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
