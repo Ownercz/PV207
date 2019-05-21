@@ -17,8 +17,6 @@ public class Supplier_contract implements java.io.Serializable {
 	@javax.persistence.ManyToOne(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
 	private cz.lipovcan.buybread.Supplier supplier;
 
-	private java.lang.String status;
-
 	@javax.persistence.OneToMany(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
 	private java.util.List<cz.lipovcan.buybread.Product> product;
 
@@ -43,14 +41,6 @@ public class Supplier_contract implements java.io.Serializable {
 		this.supplier = supplier;
 	}
 
-	public java.lang.String getStatus() {
-		return this.status;
-	}
-
-	public void setStatus(java.lang.String status) {
-		this.status = status;
-	}
-
 	public java.util.List<cz.lipovcan.buybread.Product> getProduct() {
 		return this.product;
 	}
@@ -58,7 +48,6 @@ public class Supplier_contract implements java.io.Serializable {
 	public void setProduct(java.util.List<cz.lipovcan.buybread.Product> product) {
 		this.product = product;
 	}
-	
 
 	public java.lang.Integer getNew_amount() {
 		return this.new_amount;
@@ -69,12 +58,11 @@ public class Supplier_contract implements java.io.Serializable {
 	}
 
 	public Supplier_contract(java.lang.Long id,
-			cz.lipovcan.buybread.Supplier supplier, java.lang.String status,
+			cz.lipovcan.buybread.Supplier supplier,
 			java.util.List<cz.lipovcan.buybread.Product> product,
 			java.lang.Integer new_amount) {
 		this.id = id;
 		this.supplier = supplier;
-		this.status = status;
 		this.product = product;
 		this.new_amount = new_amount;
 	}
