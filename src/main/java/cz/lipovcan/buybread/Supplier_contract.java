@@ -14,13 +14,13 @@ public class Supplier_contract implements java.io.Serializable {
 	@javax.persistence.SequenceGenerator(sequenceName = "SUPPLIER_CONTRACT_ID_SEQ", name = "SUPPLIER_CONTRACT_ID_GENERATOR")
 	private java.lang.Long id;
 
-	@javax.persistence.OneToMany(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
-	private java.util.List<cz.lipovcan.buybread.Product> products;
-
 	@javax.persistence.ManyToOne(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
 	private cz.lipovcan.buybread.Supplier supplier;
 
 	private java.lang.String status;
+
+	@javax.persistence.OneToMany(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
+	private java.util.List<cz.lipovcan.buybread.Product> product;
 
 	public Supplier_contract() {
 	}
@@ -31,15 +31,6 @@ public class Supplier_contract implements java.io.Serializable {
 
 	public void setId(java.lang.Long id) {
 		this.id = id;
-	}
-
-	public java.util.List<cz.lipovcan.buybread.Product> getProducts() {
-		return this.products;
-	}
-
-	public void setProducts(
-			java.util.List<cz.lipovcan.buybread.Product> products) {
-		this.products = products;
 	}
 
 	public cz.lipovcan.buybread.Supplier getSupplier() {
@@ -58,13 +49,21 @@ public class Supplier_contract implements java.io.Serializable {
 		this.status = status;
 	}
 
+	public java.util.List<cz.lipovcan.buybread.Product> getProduct() {
+		return this.product;
+	}
+
+	public void setProduct(java.util.List<cz.lipovcan.buybread.Product> product) {
+		this.product = product;
+	}
+
 	public Supplier_contract(java.lang.Long id,
-			java.util.List<cz.lipovcan.buybread.Product> products,
-			cz.lipovcan.buybread.Supplier supplier, java.lang.String status) {
+			cz.lipovcan.buybread.Supplier supplier, java.lang.String status,
+			java.util.List<cz.lipovcan.buybread.Product> product) {
 		this.id = id;
-		this.products = products;
 		this.supplier = supplier;
 		this.status = status;
+		this.product = product;
 	}
 
 }
