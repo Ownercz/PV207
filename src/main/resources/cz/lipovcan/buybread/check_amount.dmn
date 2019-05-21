@@ -18,34 +18,49 @@
     <dmn:informationRequirement id="_7E4C8FCD-A554-425F-B26C-B28C15204416">
       <dmn:requiredInput href="#_AEA76AA2-4747-417F-8762-F6F20438193A"/>
     </dmn:informationRequirement>
-    <dmn:decisionTable id="_CA890ECF-F0FB-487E-AFD0-79E4D7AAB4AA" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
-      <dmn:input id="_E167D593-3FF6-4CED-B0EF-9A35E46398CD">
-        <dmn:inputExpression id="_1949E524-45BA-4DF5-BD0A-FA4C58781FBD">
+    <dmn:decisionTable id="_9EEED9AD-417E-4034-B414-59FD1FB15674" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_DF3A6B43-67BA-4A15-B8B0-B0FDFC11EC2C">
+        <dmn:inputExpression id="_60D373D4-B893-4EE9-A1A4-A263569B5F43" typeRef="number">
           <dmn:text>new_amount</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
-      <dmn:input id="_54AC61C2-79FC-475F-B314-034388266A49">
-        <dmn:inputExpression id="_EE4EB335-C7B2-4C03-97D0-0C7F17EDFDE1">
+      <dmn:input id="_C19DEBBF-BA77-4003-9CF4-7A3BE348FE3C">
+        <dmn:inputExpression id="_321E1359-9D74-4378-814B-3F69936A1D22" typeRef="number">
           <dmn:text>supplier_actual_amount</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
-      <dmn:input id="_275CD885-81BB-40D3-8D6C-627C59DCD486">
-        <dmn:inputExpression id="_B944D4E4-4184-46C0-835E-B27EFB15BE49">
+      <dmn:input id="_C83DF332-1559-40A2-8F4E-CDBD6E132F0E">
+        <dmn:inputExpression id="_5A06C4FD-C30E-4568-9690-1A02A6CD3DF7" typeRef="number">
           <dmn:text>supplier_stats</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
-      <dmn:output id="_6C27B1C4-7C0E-493B-819D-28374E1A1743" typeRef="boolean"/>
-      <dmn:rule id="_2484F8EA-C37B-4851-810F-DD36CEA65C82">
-        <dmn:inputEntry id="_A2FE407E-1BA3-41EF-8A4A-057484858D67">
+      <dmn:output id="_AD63EDC0-5F36-445D-A7F9-53C59CA710A9" typeRef="boolean"/>
+      <dmn:rule id="_6D36DB17-97B6-4825-B67B-CA0448CAF719">
+        <dmn:description>stats 0 means more goods to order</dmn:description>
+        <dmn:inputEntry id="_84434C4F-ED36-4CE1-915D-5A2C8467A4EA">
+          <dmn:text>&gt;x</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_AE79629B-9F73-49D1-83F5-9E33676AD74D">
+          <dmn:text>x</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E4A2BA35-7648-4593-9B4B-22E84792A73E">
+          <dmn:text>0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_804EAC3E-48C1-4048-A3D9-EE78A28F4E63">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_16D1A46A-E94A-4F38-8BB6-C7C343742450">
+        <dmn:inputEntry id="_26DB5532-891B-4E5F-9E7B-29B0D1EEFD4A">
           <dmn:text></dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry id="_13884EFD-BE88-47C0-B758-61CDEF29B117">
+        <dmn:inputEntry id="_0CFD1D01-E9C6-4AD8-9519-6AF24C12FA63">
           <dmn:text></dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry id="_15FAE35C-B25D-4B52-872B-03580E96A231">
+        <dmn:inputEntry id="_FEE567A9-2882-4DEE-8AF9-A5821F81B368">
           <dmn:text></dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry id="_A41ED8CB-0F6D-4415-B05C-4EC3F443DA34">
+        <dmn:outputEntry id="_31C5F5B8-594E-4F99-AF6E-E07DCDFEEB12">
           <dmn:text></dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
@@ -58,13 +73,13 @@
     <dmndi:DMNDiagram>
       <di:extension>
         <kie:ComponentsWidthsExtension>
-          <kie:ComponentWidths dmnElementRef="_CA890ECF-F0FB-487E-AFD0-79E4D7AAB4AA">
+          <kie:ComponentWidths dmnElementRef="_9EEED9AD-417E-4034-B414-59FD1FB15674">
             <kie:width>50.0</kie:width>
             <kie:width>100.0</kie:width>
-            <kie:width>100.0</kie:width>
-            <kie:width>100.0</kie:width>
-            <kie:width>100.0</kie:width>
-            <kie:width>100.0</kie:width>
+            <kie:width>169.0</kie:width>
+            <kie:width>146.0</kie:width>
+            <kie:width>188.0</kie:width>
+            <kie:width>262.0</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
