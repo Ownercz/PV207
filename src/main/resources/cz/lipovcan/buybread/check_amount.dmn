@@ -53,7 +53,7 @@
       <dmn:rule id="_C1CCD39B-A306-4DAD-A973-06E9C238463F">
         <dmn:description>new_amount is more</dmn:description>
         <dmn:inputEntry id="_1B2F953A-A5BD-4465-8707-1025C07F4ED5">
-          <dmn:text>&gt;1</dmn:text>
+          <dmn:text>&gt;supplier_actual_amount</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_F65A63B5-AD24-49E7-8227-042C2701C864">
           <dmn:text>1</dmn:text>
@@ -68,7 +68,7 @@
       <dmn:rule id="_8D142327-DC3B-49BE-A028-D29DD551447B">
         <dmn:description>new_amount is the same</dmn:description>
         <dmn:inputEntry id="_4D949F81-05FC-485A-BFC1-B825A1AAA95B">
-          <dmn:text>1</dmn:text>
+          <dmn:text>supplier_actual_amount</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_AA36D2E9-9C93-4A0D-B9B4-6CD9FA6533AE">
           <dmn:text>1</dmn:text>
