@@ -17,10 +17,10 @@ public class Supplier_contract implements java.io.Serializable {
 	@javax.persistence.OneToMany(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
 	private java.util.List<cz.lipovcan.buybread.Product> products;
 
-	@org.kie.api.definition.type.Description("foreign key to product")
-	private java.lang.String supplier_name;
+	@javax.persistence.ManyToOne(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
+	private cz.lipovcan.buybread.Supplier supplier;
 
-	private java.lang.Integer supplier_amount;
+	private java.lang.String status;
 
 	public Supplier_contract() {
 	}
@@ -42,29 +42,29 @@ public class Supplier_contract implements java.io.Serializable {
 		this.products = products;
 	}
 
-	public java.lang.String getSupplier_name() {
-		return this.supplier_name;
+	public cz.lipovcan.buybread.Supplier getSupplier() {
+		return this.supplier;
 	}
 
-	public void setSupplier_name(java.lang.String supplier_name) {
-		this.supplier_name = supplier_name;
+	public void setSupplier(cz.lipovcan.buybread.Supplier supplier) {
+		this.supplier = supplier;
 	}
 
-	public java.lang.Integer getSupplier_amount() {
-		return this.supplier_amount;
+	public java.lang.String getStatus() {
+		return this.status;
 	}
 
-	public void setSupplier_amount(java.lang.Integer supplier_amount) {
-		this.supplier_amount = supplier_amount;
+	public void setStatus(java.lang.String status) {
+		this.status = status;
 	}
 
 	public Supplier_contract(java.lang.Long id,
 			java.util.List<cz.lipovcan.buybread.Product> products,
-			java.lang.String supplier_name, java.lang.Integer supplier_amount) {
+			cz.lipovcan.buybread.Supplier supplier, java.lang.String status) {
 		this.id = id;
 		this.products = products;
-		this.supplier_name = supplier_name;
-		this.supplier_amount = supplier_amount;
+		this.supplier = supplier;
+		this.status = status;
 	}
 
 }
