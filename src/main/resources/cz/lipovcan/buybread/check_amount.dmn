@@ -41,7 +41,7 @@
           <dmn:text>&lt;supplier_actual_amount</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_BB5266B9-0A1F-47A8-9A1E-4167435E3F58">
-          <dmn:text>1</dmn:text>
+          <dmn:text>supplier_actual_amount</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_0523476B-0997-4A96-A701-1F8ADD8C1CBA">
           <dmn:text>0</dmn:text>
@@ -56,7 +56,7 @@
           <dmn:text>&gt;supplier_actual_amount</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_F65A63B5-AD24-49E7-8227-042C2701C864">
-          <dmn:text>1</dmn:text>
+          <dmn:text>supplier_actual_amount</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_F2951BC6-9FCE-4A59-8EB5-0486CA4B20C3">
           <dmn:text>2</dmn:text>
@@ -71,7 +71,7 @@
           <dmn:text>supplier_actual_amount</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_AA36D2E9-9C93-4A0D-B9B4-6CD9FA6533AE">
-          <dmn:text>1</dmn:text>
+          <dmn:text>supplier_actual_amount</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_B462E159-CAA5-4F48-AD64-9B4BABF6BD4B">
           <dmn:text>1</dmn:text>
