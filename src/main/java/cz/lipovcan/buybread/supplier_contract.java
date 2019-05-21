@@ -5,7 +5,7 @@ package cz.lipovcan.buybread;
  */
 
 @javax.persistence.Entity
-public class supplier_contract implements java.io.Serializable {
+public class Supplier_contract implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
@@ -22,7 +22,7 @@ public class supplier_contract implements java.io.Serializable {
 
 	private java.lang.Integer supplier_amount;
 
-	public supplier_contract() {
+	public Supplier_contract() {
 	}
 
 	public java.lang.Long getId() {
@@ -58,7 +58,7 @@ public class supplier_contract implements java.io.Serializable {
 		this.supplier_amount = supplier_amount;
 	}
 
-	public supplier_contract(java.lang.Long id,
+	public Supplier_contract(java.lang.Long id,
 			java.util.List<cz.lipovcan.buybread.Product> products,
 			java.lang.String supplier_name, java.lang.Integer supplier_amount) {
 		this.id = id;
