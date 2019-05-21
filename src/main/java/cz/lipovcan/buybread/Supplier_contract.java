@@ -22,6 +22,8 @@ public class Supplier_contract implements java.io.Serializable {
 	@javax.persistence.OneToMany(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
 	private java.util.List<cz.lipovcan.buybread.Product> product;
 
+	private java.lang.Integer new_amount;
+
 	public Supplier_contract() {
 	}
 
@@ -57,13 +59,23 @@ public class Supplier_contract implements java.io.Serializable {
 		this.product = product;
 	}
 
+	public java.lang.Integer getNew_amount() {
+		return this.new_amount;
+	}
+
+	public void setNew_amount(java.lang.Integer new_amount) {
+		this.new_amount = new_amount;
+	}
+
 	public Supplier_contract(java.lang.Long id,
 			cz.lipovcan.buybread.Supplier supplier, java.lang.String status,
-			java.util.List<cz.lipovcan.buybread.Product> product) {
+			java.util.List<cz.lipovcan.buybread.Product> product,
+			java.lang.Integer new_amount) {
 		this.id = id;
 		this.supplier = supplier;
 		this.status = status;
 		this.product = product;
+		this.new_amount = new_amount;
 	}
 
 }
