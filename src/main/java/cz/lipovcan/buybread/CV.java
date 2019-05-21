@@ -25,6 +25,8 @@ public class CV implements java.io.Serializable {
 	@org.hibernate.validator.constraints.NotBlank
 	private java.lang.String last_name;
 
+	private java.lang.Boolean candidate_agree;
+
 	public CV() {
 	}
 
@@ -60,12 +62,22 @@ public class CV implements java.io.Serializable {
 		this.last_name = last_name;
 	}
 
+	public java.lang.Boolean getCandidate_agree() {
+		return this.candidate_agree;
+	}
+
+	public void setCandidate_agree(java.lang.Boolean candidate_agree) {
+		this.candidate_agree = candidate_agree;
+	}
+
 	public CV(java.lang.Long id, java.lang.Boolean rejected,
-			java.lang.String first_name, java.lang.String last_name) {
+			java.lang.String first_name, java.lang.String last_name,
+			java.lang.Boolean candidate_agree) {
 		this.id = id;
 		this.rejected = rejected;
 		this.first_name = first_name;
 		this.last_name = last_name;
+		this.candidate_agree = candidate_agree;
 	}
 
 }
