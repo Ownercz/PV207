@@ -7,9 +7,6 @@
   <dmn:inputData id="_AEA76AA2-4747-417F-8762-F6F20438193A" name="new_amount">
     <dmn:variable id="_EFF3B958-8C67-4F67-884F-CA8E15ED9D07" name="new_amount" typeRef="number"/>
   </dmn:inputData>
-  <dmn:inputData id="_E750BFE7-6CBA-440B-8D61-A21FCCB63BDA" name="supplier_actual_amount">
-    <dmn:variable id="_C3F8766F-827F-4B40-9C87-30E034CFCC09" name="supplier_actual_amount" typeRef="number"/>
-  </dmn:inputData>
   <dmn:decision id="_456B9DC3-391D-4A39-8856-1CFD394E7AF8" name="check_amount_DMN">
     <dmn:variable id="_B2473021-2913-4208-AD9F-81998DD0DE77" name="check_amount_DMN" typeRef="boolean"/>
     <dmn:informationRequirement id="_6B35FC68-25E0-43A4-BE86-7537376D4F90">
@@ -41,10 +38,10 @@
       <dmn:rule id="_F472C51D-4DFC-4021-AFA7-6DF3E3150D6F">
         <dmn:description>new_amount is less</dmn:description>
         <dmn:inputEntry id="_D330F1CD-B77A-4CE6-A6DF-4114B2507052">
-          <dmn:text>&lt;supplier.Supplier_actual_amount</dmn:text>
+          <dmn:text>&lt;supplier_actual_amount</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_BB5266B9-0A1F-47A8-9A1E-4167435E3F58">
-          <dmn:text>supplier.Supplier_actual_amount</dmn:text>
+          <dmn:text>supplier_actual_amount</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_0523476B-0997-4A96-A701-1F8ADD8C1CBA">
           <dmn:text>0</dmn:text>
@@ -56,10 +53,10 @@
       <dmn:rule id="_C1CCD39B-A306-4DAD-A973-06E9C238463F">
         <dmn:description>new_amount is more</dmn:description>
         <dmn:inputEntry id="_1B2F953A-A5BD-4465-8707-1025C07F4ED5">
-          <dmn:text>&gt;supplier.Supplier_actual_amount</dmn:text>
+          <dmn:text>&gt;supplier_actual_amount</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_F65A63B5-AD24-49E7-8227-042C2701C864">
-          <dmn:text>supplier.Supplier_actual_amount</dmn:text>
+          <dmn:text>supplier_actual_amount</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_F2951BC6-9FCE-4A59-8EB5-0486CA4B20C3">
           <dmn:text>2</dmn:text>
@@ -71,10 +68,10 @@
       <dmn:rule id="_8D142327-DC3B-49BE-A028-D29DD551447B">
         <dmn:description>new_amount is the same</dmn:description>
         <dmn:inputEntry id="_4D949F81-05FC-485A-BFC1-B825A1AAA95B">
-          <dmn:text>supplier.Supplier_actual_amount</dmn:text>
+          <dmn:text>supplier_actual_amount</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_AA36D2E9-9C93-4A0D-B9B4-6CD9FA6533AE">
-          <dmn:text>supplier.Supplier_actual_amount</dmn:text>
+          <dmn:text>supplier_actual_amount</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_B462E159-CAA5-4F48-AD64-9B4BABF6BD4B">
           <dmn:text>1</dmn:text>
@@ -100,6 +97,9 @@
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
+  <dmn:inputData id="_E750BFE7-6CBA-440B-8D61-A21FCCB63BDA" name="supplier_actual_amount">
+    <dmn:variable id="_C3F8766F-827F-4B40-9C87-30E034CFCC09" name="supplier_actual_amount" typeRef="number"/>
+  </dmn:inputData>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <di:extension>
@@ -132,6 +132,15 @@
         <dc:Bounds x="270" y="102.68421052631578" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_456B9DC3-391D-4A39-8856-1CFD394E7AF8" dmnElementRef="_456B9DC3-391D-4A39-8856-1CFD394E7AF8" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="476" y="156" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_E750BFE7-6CBA-440B-8D61-A21FCCB63BDA" dmnElementRef="_E750BFE7-6CBA-440B-8D61-A21FCCB63BDA" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -141,26 +150,17 @@
         <dc:Bounds x="270" y="208.3421052631579" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-_456B9DC3-391D-4A39-8856-1CFD394E7AF8" dmnElementRef="_456B9DC3-391D-4A39-8856-1CFD394E7AF8" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="481" y="156" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-_6B35FC68-25E0-43A4-BE86-7537376D4F90" dmnElementRef="_6B35FC68-25E0-43A4-BE86-7537376D4F90">
         <di:waypoint x="681" y="339"/>
-        <di:waypoint x="581" y="181"/>
+        <di:waypoint x="576" y="181"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-_3299AD52-084A-4815-9120-E072BBA4CEE3" dmnElementRef="_3299AD52-084A-4815-9120-E072BBA4CEE3">
         <di:waypoint x="370" y="233.3421052631579"/>
-        <di:waypoint x="481" y="181"/>
+        <di:waypoint x="476" y="181"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-_7E4C8FCD-A554-425F-B26C-B28C15204416" dmnElementRef="_7E4C8FCD-A554-425F-B26C-B28C15204416">
         <di:waypoint x="370" y="127.68421052631578"/>
-        <di:waypoint x="481" y="181"/>
+        <di:waypoint x="476" y="181"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
