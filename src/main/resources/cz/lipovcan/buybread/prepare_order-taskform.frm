@@ -1,0 +1,1 @@
+{"id":"03dd3507-5fd6-433b-85ec-78e73f4341c0","name":"prepare_order-taskform.frm","model":{"taskName":"prepare_order","processId":"BuyBread.Managewarehouse","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
