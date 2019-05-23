@@ -10,7 +10,8 @@ promotions = [
     "amount": random.randint(1,6),
     "daysToExpire": random.randint(1,6),
     "id": random.randint(1,6),
-    "name": "rohlik"
+    "name": "rohlik",
+    "price": random.randint(-1,100)
   }
 ]
 
@@ -42,6 +43,7 @@ class Promotion(Resource):
         for promotion in promotions:
             if(name == promotion["name"]):
                 promotion["daysToExpire"] = random.randint(1,6)
+                promotion["price"] = random.randint(-1,100)
                 return promotion, 200
         return "Item not found", 404
 
