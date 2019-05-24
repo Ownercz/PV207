@@ -18,7 +18,7 @@ promotions = [
 orders = [
   {
     "address": "Brno, Hybesova",
-    "canceled": random.choice[True,False],
+    "canceled": random.choice([True,False]),
     "first_name": "Radim",
     "last_name": "Lipovcan",
     "goods_available": random.choice([True,False]),
