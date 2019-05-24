@@ -18,10 +18,10 @@ promotions = [
 orders = [
   {
     "address": "Brno, Hybesova",
-    "canceled": False,
+    "canceled": random.choice[True,False],
     "first_name": "Radim",
     "last_name": "Lipovcan",
-    "goods_available": random.choice([True]),
+    "goods_available": random.choice([True,False]),
     "is_payed": random.choice([True,False]),
     "id":  1,
     "order_price": random.randint(10,600),
@@ -99,8 +99,8 @@ class Order(Resource):
     def get(self, name):
         for order in orders:
             if(name == order["id"]):
-                order["goods_available"] = random.choice([True])
-                order["is_payed"] = random.choice([False])
+                order["goods_available"] = random.choice([True,False])
+                order["is_payed"] = random.choice([True,False])
                 order["canceled"] = random.choice([True, False])
                 order["order_price"] = random.randint(10,1500)
                 return order, 200
@@ -236,4 +236,3 @@ api.add_resource(Order, "/orders/<int:name>")
 api.add_resource(Supplier, "/suppliers/<int:name>")
 app.run(host='0.0.0.0',port=5000)
 app.run(debug=True)
-
