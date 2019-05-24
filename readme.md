@@ -9,6 +9,8 @@ Requirements:
 
 1. JBPM 7.2
 1. Python 2.7
+1. Python Flask
+
 ## HOWTO
 1. Import JBPM project from our Github repo: https://github.com/Ownercz/PV207
 1. Run python rest api server by executing python api.py (from the same machine)
